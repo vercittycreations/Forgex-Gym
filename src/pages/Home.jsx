@@ -2,14 +2,15 @@ import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom'
 
-const navigate = useNavigate()
+
+
+export default function Home() {
+  const navigate = useNavigate()
 
 const handleProgramSelect = (program) => {
   localStorage.setItem('selectedProgram', JSON.stringify(program))
   navigate('/dashboard')
 }
-
-export default function Home() {
   return (
     <div className="bg-fitness-black">
       {/* Hero */}
